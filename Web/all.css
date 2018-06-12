@@ -1,0 +1,193 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: relative;
+}
+
+.cloud {
+  width: 180px;
+  height: 180px;
+  background-image: url("https://www.gdlmg.net/TTMBJ/css/images/card_aura_gray_180x180.png");
+  animation: cloud .8s steps(30) infinite;
+  position: absolute;
+  z-index: 1;
+}
+
+@keyframes cloud{
+  0%{
+    background-position: 0px;
+  }
+  100%{
+    background-position: -5400px;
+  }
+}
+
+.show{
+  width: 82px;
+  height: 100px;
+  border:1px solid #fff;
+  z-index: 2;
+  top:0;
+  overflow: hidden;
+  position: relative;
+}
+.show span{
+  position: absolute;
+}
+.show ul{
+  height: 100px;
+  width: 820px;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(https://www.gdlmg.net/TTMBJ/css/images/card_slot_60x73.png);
+  background-size: 50% ;
+  background-repeat: repeat-x;
+  position: absolute;
+  left:82px;
+}
+.show ul li{
+  width: 82px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:50;
+}
+.show ul li img{
+  width: 80%;
+}
+
+.show li:nth-child(1){
+  background-image: url('http://www.olgame.tw/lm/css/lmimg/gacha/card_back_82x100.png');
+  display:none;
+}
+
+.clickButton{
+  width: 92px;
+  height: 31px;
+  background-image: url(https://www.gdlmg.net/TTMBJ/css/images/btn_blue_92x31.png);
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+}
+.card{
+  position: relative;
+}
+.shineBorder{
+  position: absolute;
+  top:-7px;
+  left: -6px;
+  animation:shine 5s infinite;
+}
+@keyframes shine {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#slideLeft{
+/*   animation-name:slide; */
+  animation-duration: 2s;
+}
+@keyframes slide {
+   
+    100% {left:-738px;border-color:red;}
+}
+
+@keyframes shine {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    50% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.white{
+  background-color: #fff;
+  width: 85px;
+  height: 110px;
+  z-index: 150;
+  opacity: 0;
+  animation-duration: .2s;
+}
+
+@keyframes white {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.fire{
+  width: 128px;
+  height: 128px;
+  background-image: url("http://www.olgame.tw/lm/css/lmimg/gacha/card_aura_red_128x128.png");
+  animation: fire .8s steps(30) infinite;
+  position: absolute;
+  z-index: -10;
+}
+
+@keyframes fire{
+  0%{
+    background-position: 0px;
+  }
+  100%{
+    background-position: -3840px;
+  }
+}

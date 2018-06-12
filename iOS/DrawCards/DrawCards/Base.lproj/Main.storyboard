@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxi-aW-Vvc">
+                                <rect key="frame" x="67" y="213.5" width="240" height="240"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-U7-sBm">
+                                        <rect key="frame" x="79" y="70" width="82" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="emt-LX-M5i"/>
+                                            <constraint firstAttribute="height" constant="100" id="xBN-bt-RTW"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_aura_gray_180x180_15" translatesAutoresizingMaskIntoConstraints="NO" id="elm-gO-4I6">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="9aI-CM-sPi"/>
+                                            <constraint firstAttribute="height" constant="240" id="uAa-y7-qb6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back_82x100" translatesAutoresizingMaskIntoConstraints="NO" id="AiA-bJ-V2E">
+                                        <rect key="frame" x="79" y="70" width="82" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_slot_line_94x112-(1)_01" translatesAutoresizingMaskIntoConstraints="NO" id="cNz-0T-IiR">
+                                        <rect key="frame" x="73" y="64" width="94" height="112"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Peh-U7-sBm" firstAttribute="centerX" secondItem="xxi-aW-Vvc" secondAttribute="centerX" id="7Dd-tM-ZW0"/>
+                                    <constraint firstItem="cNz-0T-IiR" firstAttribute="centerY" secondItem="xxi-aW-Vvc" secondAttribute="centerY" id="8Yv-Kx-qAd"/>
+                                    <constraint firstItem="elm-gO-4I6" firstAttribute="centerX" secondItem="xxi-aW-Vvc" secondAttribute="centerX" id="Dgl-nW-Xhr"/>
+                                    <constraint firstItem="cNz-0T-IiR" firstAttribute="centerX" secondItem="xxi-aW-Vvc" secondAttribute="centerX" id="JBW-ym-ET1"/>
+                                    <constraint firstItem="AiA-bJ-V2E" firstAttribute="centerX" secondItem="xxi-aW-Vvc" secondAttribute="centerX" id="gXk-Cj-s6K"/>
+                                    <constraint firstAttribute="width" constant="240" id="i2L-QG-MCZ"/>
+                                    <constraint firstAttribute="height" constant="240" id="qDB-aF-h2d"/>
+                                    <constraint firstItem="Peh-U7-sBm" firstAttribute="centerY" secondItem="xxi-aW-Vvc" secondAttribute="centerY" id="qL5-Ow-ban"/>
+                                    <constraint firstItem="AiA-bJ-V2E" firstAttribute="centerY" secondItem="xxi-aW-Vvc" secondAttribute="centerY" id="w52-nC-z14"/>
+                                    <constraint firstItem="elm-gO-4I6" firstAttribute="centerY" secondItem="xxi-aW-Vvc" secondAttribute="centerY" id="xuy-p1-goc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKy-tR-0Jg">
+                                <rect key="frame" x="141" y="413" width="92" height="31"/>
+                                <state key="normal" title="Open" backgroundImage="btn_blue_92x31"/>
+                                <connections>
+                                    <action selector="openCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UdO-aZ-691"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uKy-tR-0Jg" firstAttribute="top" secondItem="AiA-bJ-V2E" secondAttribute="bottom" constant="30" id="2nj-aH-Msc"/>
+                            <constraint firstItem="xxi-aW-Vvc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Wd-jA-9ws"/>
+                            <constraint firstItem="uKy-tR-0Jg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BEk-yz-YYR"/>
+                            <constraint firstItem="xxi-aW-Vvc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F2Z-Zi-Tyz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="xxi-aW-Vvc" id="OjY-xa-tn2"/>
+                        <outlet property="backsideCard" destination="AiA-bJ-V2E" id="YKQ-Wb-kko"/>
+                        <outlet property="borderImageView" destination="cNz-0T-IiR" id="cFa-fM-c91"/>
+                        <outlet property="cardAura" destination="elm-gO-4I6" id="bCg-Kb-8q6"/>
+                        <outlet property="maskView" destination="Peh-U7-sBm" id="Umv-Aa-Uff"/>
+                        <outlet property="openButton" destination="uKy-tR-0Jg" id="SoG-a2-eCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_blue_92x31" width="92" height="31"/>
+        <image name="card_aura_gray_180x180_15" width="180" height="180"/>
+        <image name="card_back_82x100" width="82" height="100"/>
+        <image name="card_slot_line_94x112-(1)_01" width="94" height="112"/>
+    </resources>
+</document>
